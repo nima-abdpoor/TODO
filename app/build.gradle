@@ -7,6 +7,7 @@ import dependencies.SupportDependencies
 import dependencies.TestDependencies
 import dependencies.Dependencies
 
+
 apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
