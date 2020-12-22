@@ -2,6 +2,7 @@ package com.nima.todo.business.data.cache.implementation
 
 import com.nima.todo.business.data.cache.abstraction.NoteCacheDataSource
 import com.nima.todo.business.domain.model.Note
+import com.nima.todo.framework.datasource.cache.abstraction.NoteDaoService
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -22,7 +23,7 @@ constructor(
         noteDaoService.updateNote(primaryKey, newTitle, newBody)
 
     override suspend fun searchNotes(query: String, filterAndOrder: String, page: Int) =
-        noteDaoService.searchNotes(query, filterAndOrder, page)
+        noteDaoService.returnOrderedQuery(query, filterAndOrder, page)
 
     override suspend fun searchNoteById(id: String) =
         noteDaoService.searchNoteById(id)

@@ -2,13 +2,14 @@ package com.nima.todo.business.data.network.implimentation
 
 import com.nima.todo.business.data.network.abstraction.NoteNetworkDataSource
 import com.nima.todo.business.domain.model.Note
+import com.nima.todo.framework.datasource.network.abstraction.NoteFireStoreService
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
 class NoteNetworkDataSourceImplementation @Inject
 constructor(
-    private val fireStoreService  : NoteFirestoreService
+    private val fireStoreService  : NoteFireStoreService
 ) : NoteNetworkDataSource{
     override suspend fun insertOrUpdateNote(note: Note) {
         return fireStoreService.insertOrUpdateNote(note)
