@@ -13,7 +13,7 @@ class NoteFactory
 constructor(
     private val dateUtil: DateUtil
 ) {
-    fun createSingleNote(
+     fun createSingleNote(
         id: String? = null,
         title: String,
         body: String? = null

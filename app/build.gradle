@@ -80,7 +80,13 @@ dependencies {
     implementation Dependencies.retrofit_gson
     implementation Dependencies.firebase_firestore
     implementation Dependencies.firebase_auth
+
+    //kotlin-coroutines
     implementation Dependencies.kotlin_coroutines_play_services
+    implementation Dependencies.kotlin_coroutines
+    implementation Dependencies.kotlin_coroutines_android
+
+    
     implementation Dependencies.firebase_analytics
     implementation Dependencies.firebase_crashlytics
     implementation AndroidTestDependencies.idling_resource
