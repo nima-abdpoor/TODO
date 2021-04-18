@@ -22,7 +22,8 @@ constructor(
     }
 
     fun convertStringToTimestamp(date: String): Timestamp {
-        return Timestamp(dataFormat.parse(date))
+        val d = dataFormat.parse(date) ?: Date()
+        return Timestamp(d)
     }
 
     fun getCurrentTimestamp(): String {
