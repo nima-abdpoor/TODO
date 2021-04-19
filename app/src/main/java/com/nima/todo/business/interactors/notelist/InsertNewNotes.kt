@@ -40,7 +40,7 @@ class InsertNewNotes(
                 data =  viewState,
                 stateEvent = stateEvent
             )
-            updateCacheResponse(newNote)
+            updateNetwork(newNote)
         }
         else{
             cacheResponse =  DataState.data(
@@ -56,7 +56,7 @@ class InsertNewNotes(
         emit(cacheResponse)
     }
 
-    private suspend fun updateCacheResponse(newNote: Note) {
+    private suspend fun updateNetwork(newNote: Note) {
         noteNetworkDataSource.insertOrUpdateNote(newNote)
     }
 

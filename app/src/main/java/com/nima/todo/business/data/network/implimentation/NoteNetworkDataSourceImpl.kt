@@ -7,7 +7,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class NoteNetworkDataSourceImplementation @Inject
+class NoteNetworkDataSourceImpl @Inject
 constructor(
     private val fireStoreService  : NoteFireStoreService
 ) : NoteNetworkDataSource{
