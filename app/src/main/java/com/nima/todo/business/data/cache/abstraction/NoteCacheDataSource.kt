@@ -12,7 +12,8 @@ interface NoteCacheDataSource {
     suspend fun updateNote(
         primaryKey: String,
         newTitle: String,
-        newBody: String?
+        newBody: String?,
+        timestamp: String?
     ): Int
 
     suspend fun searchNotes(
