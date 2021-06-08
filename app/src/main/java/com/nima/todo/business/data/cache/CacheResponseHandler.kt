@@ -36,10 +36,10 @@ abstract class CacheResponseHandler<ViewState , Data>(
                 stateEvent =stateEvent
             )
         }
-         response.value?.let {
+         response.value.let {
              return handleSuccess(it)
          }
     }
 
-    abstract fun handleSuccess(resultObj: Data): DataState<ViewState>
+    abstract fun handleSuccess(resultObj: Data): DataState<ViewState>?
 }
