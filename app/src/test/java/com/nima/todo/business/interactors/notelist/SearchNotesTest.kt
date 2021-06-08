@@ -1,11 +1,10 @@
-package com.nima.todo.business.interactors
+package com.nima.todo.business.interactors.notelist
 
 import com.nima.todo.business.data.cache.CacheErrors
 import com.nima.todo.business.data.cache.abstraction.NoteCacheDataSource
 import com.nima.todo.business.domain.model.Note
 import com.nima.todo.business.domain.model.NoteFactory
 import com.nima.todo.business.domain.state.DataState
-import com.nima.todo.business.interactors.notelist.SearchNotes
 import com.nima.todo.business.interactors.notelist.SearchNotes.Companion.SEARCH_NOTES_NO_MATCHING_RESULTS
 import com.nima.todo.business.interactors.notelist.SearchNotes.Companion.SEARCH_NOTES_SUCCESS
 import com.nima.todo.data.cache.FORCE_SEARCH_NOTES_EXCEPTION

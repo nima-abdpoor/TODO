@@ -1,4 +1,4 @@
-package com.nima.todo.business.interactors
+package com.nima.todo.business.interactors.notelist
 
 import com.nima.todo.business.data.cache.abstraction.NoteCacheDataSource
 import com.nima.todo.business.domain.model.NoteFactory
