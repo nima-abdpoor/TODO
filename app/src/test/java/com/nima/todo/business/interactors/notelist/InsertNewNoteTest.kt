@@ -1,11 +1,10 @@
-package com.nima.todo.business.interactors
+package com.nima.todo.business.interactors.notelist
 
 import com.nima.todo.business.data.cache.CacheErrors
 import com.nima.todo.business.data.cache.abstraction.NoteCacheDataSource
 import com.nima.todo.business.data.network.abstraction.NoteNetworkDataSource
 import com.nima.todo.business.domain.model.NoteFactory
 import com.nima.todo.business.domain.state.DataState
-import com.nima.todo.business.interactors.notelist.InsertNewNotes
 import com.nima.todo.business.interactors.notelist.InsertNewNotes.Companion.INSERT_NOTE_FAILED
 import com.nima.todo.business.interactors.notelist.InsertNewNotes.Companion.INSERT_NOTE_SUCCESS
 import com.nima.todo.data.cache.FORCE_GENERAL_FAILURE
@@ -19,7 +18,6 @@ import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import java.net.CacheResponse
 import java.util.*
 
 /*
