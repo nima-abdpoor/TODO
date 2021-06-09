@@ -40,6 +40,7 @@ interface NoteDaoService {
         pageSize: Int = NOTE_PAGINATION_PAGE_SIZE
     ): List<Note>
 
+    suspend fun getAllNotes(): List<Note>
 
     suspend fun searchNoteById(id: String): Note?
 
