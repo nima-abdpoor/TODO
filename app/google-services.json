@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "155597844199",
+    "project_id": "todo-463f9",
+    "storage_bucket": "todo-463f9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155597844199:android:10d16a45d3befeb2507c42",
+        "android_client_info": {
+          "package_name": "com.nima.todo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155597844199-gpf7vf4t8rbqrql53kt6cfbmuuqtfq74.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsv7pLrnxlPggoYffeYXptWgaBv5A_4HU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155597844199-gpf7vf4t8rbqrql53kt6cfbmuuqtfq74.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
