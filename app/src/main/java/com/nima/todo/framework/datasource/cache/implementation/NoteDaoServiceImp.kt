@@ -28,13 +28,27 @@ class NoteDaoServiceImp @Inject constructor(
         return noteDao.deleteNotes(ids = ids)
     }
 
-    override suspend fun updateNote(primaryKey: String, newTitle: String, newBody: String?): Int {
-        return noteDao.updateNote(
-            primaryKey = primaryKey,
-            title = newTitle,
-            body = newBody,
-            updated_at = dateUtil.getCurrentTimestamp()
-        )
+    override suspend fun updateNote(
+        primaryKey: String,
+        newTitle: String,
+        newBody: String?,
+        timeStamp: String?
+    ): Int {
+        return if (timeStamp != null) {
+            noteDao.updateNote(
+                primaryKey = primaryKey,
+                title = newTitle,
+                body = newBody,
+                updated_at = timeStamp
+            )
+        } else {
+            noteDao.updateNote(
+                primaryKey = primaryKey,
+                title = newTitle,
+                body = newBody,
+                updated_at = dateUtil.getCurrentTimestamp()
+            )
+        }
     }
 
     override suspend fun searchNotesOrderByDateDESC(
