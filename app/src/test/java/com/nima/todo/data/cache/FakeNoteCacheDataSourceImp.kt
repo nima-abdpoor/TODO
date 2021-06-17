@@ -2,6 +2,7 @@ package com.nima.todo.data.cache
 
 import com.nima.todo.business.data.cache.abstraction.NoteCacheDataSource
 import com.nima.todo.business.domain.model.Note
+import com.nima.todo.business.domain.model.NoteFactory
 import com.nima.todo.business.domain.util.DateUtil
 import com.nima.todo.framework.datasource.database.NOTE_PAGINATION_PAGE_SIZE
 
@@ -15,7 +16,8 @@ const val FORCE_GENERAL_FAILURE = "FORCE_GENERAL_FAILURE"
 class FakeNoteCacheDataSourceImpl
 constructor(
     private val notesData: HashMap<String, Note>,
-    private val dateUtil: DateUtil
+    private val dateUtil: DateUtil,
+    private val noteFactory: NoteFactory
 ): NoteCacheDataSource {
 
     override suspend fun insertNote(note: Note): Long {
@@ -116,5 +118,9 @@ constructor(
             notesData[note.id] = note
         }
         return results
+    }
+
+    override suspend fun getAllNotes(): List<Note> {
+        return noteFactory.createNoteList(100)
     }
 }
