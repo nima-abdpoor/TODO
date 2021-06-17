@@ -109,7 +109,7 @@ abstract class DataChannelManager<ViewState> {
         return isStateEventActive(stateEvent)
     }
 
-    fun getChannelScope(): CoroutineScope {
+    private fun getChannelScope(): CoroutineScope {
         return channelScope?: setupNewChannelScope(CoroutineScope(IO))
     }
 

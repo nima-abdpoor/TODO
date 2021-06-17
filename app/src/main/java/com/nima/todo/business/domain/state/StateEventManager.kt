@@ -32,7 +32,7 @@ class StateEventManager {
 
     fun addStateEvent(stateEvent: StateEvent){
 //        EspressoIdlingResource.increment()
-        activeStateEvents.put(stateEvent.eventName(), stateEvent)
+        activeStateEvents[stateEvent.eventName()] = stateEvent
         syncNumActiveStateEvents()
     }
 
