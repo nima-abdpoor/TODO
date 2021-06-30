@@ -19,15 +19,15 @@ class DeleteNote<ViewState>(
     fun deleteNote(
         note: Note,
         stateEvent: StateEvent
-    ): Flow<DataState<NoteListViewState>?> = flow {
+    ): Flow<DataState<ViewState>?> = flow {
         val cacheResult = safeCacheCall(Dispatchers.IO) {
             noteCacheDataSource.deleteNote(note.id)
         }
-        val response = object : CacheResponseHandler<NoteListViewState, Int>(
+        val response = object : CacheResponseHandler<ViewState, Int>(
             response = cacheResult,
             stateEvent = stateEvent
         ) {
-            override fun handleSuccess(resultObj: Int): DataState<NoteListViewState> {
+            override fun handleSuccess(resultObj: Int): DataState<ViewState> {
                 return if (resultObj > 0) {
                     DataState.data(
                         response = Response(
