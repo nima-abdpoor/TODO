@@ -175,7 +175,8 @@ object AppModule {
             SearchNotes(noteCacheDataSource),
             GetNumNotes(noteCacheDataSource),
             RestoreDeletedNote(noteCacheDataSource, noteNetworkDataSource),
-            DeleteMultipleNotes(noteCacheDataSource, noteNetworkDataSource)
+            DeleteMultipleNotes(noteCacheDataSource, noteNetworkDataSource),
+            InsertMultipleNotes(noteCacheDataSource,noteNetworkDataSource)
         )
     }
 
