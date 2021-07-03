@@ -1,7 +1,7 @@
 package com.nima.todo.framework.datasource.cache.abstraction
 
 import com.nima.todo.business.domain.model.Note
-import com.nima.todo.framework.datasource.database.NOTE_PAGINATION_PAGE_SIZE
+import com.nima.todo.framework.datasource.cache.database.NOTE_PAGINATION_PAGE_SIZE
 
 interface NoteDaoService {
     suspend fun insertNote(note: Note): Long
