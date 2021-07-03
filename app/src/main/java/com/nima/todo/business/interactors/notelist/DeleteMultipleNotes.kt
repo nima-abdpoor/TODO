@@ -89,5 +89,6 @@ class DeleteMultipleNotes(
         val DELETE_NOTE_PENDING = "Delete pending..."
         val DELETE_NOTE_FAILED = "Failed to delete note."
         val DELETE_ARE_YOU_SURE = "Are you sure you want to delete this?"
+        val DELETE_NOTES_YOU_MUST_SELECT = "You haven't selected any notes to delete."
     }
 }
